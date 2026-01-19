@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>ARANID PMC – Black Archive</title>
+<style>
+body{margin:0;font-family:Consolas,monospace;background:#020306;color:#d8fdd8;line-height:1.85}
+header{padding:70px 30px;text-align:center;background:radial-gradient(circle at top,#0b0f18,#020306);border-bottom:1px solid #0f0}
+header h1{letter-spacing:6px;margin:0}
+header p{opacity:.9}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;background:#050811;position:sticky;top:0;z-index:10;border-bottom:1px solid #0f0}
+nav button{background:#070c16;color:#0f0;border:1px solid #0f0;padding:10px 16px;cursor:pointer;transition:.25s;border-radius:4px}
+nav button:hover{background:#0f0;color:#000}
+section{display:none;padding:50px 22px;max-width:1200px;margin:auto;animation:fade .6s}
+section.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.card{background:#040814;padding:24px;border-left:4px solid #0f0;border-radius:6px;margin-bottom:26px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.redacted{background:#000;color:#000;padding:2px 6px}
+.redacted:hover{color:#0f0}
+.callsign{color:#0f0;font-weight:bold;letter-spacing:1px}
+.rank{color:#7fff00;font-weight:bold}
+.threat{color:#ff6b6b;font-weight:bold}
+.terminal{background:#000;color:#0f0;padding:22px;border-radius:6px;box-shadow:0 0 18px #000}
+.timeline{border-left:2px solid #0f0;padding-left:20px}
+.time{color:#7fff00}
+footer{text-align:center;padding:35px;font-size:12px;color:#8aa;border-top:1px solid #0f0}
+</style>
+<script>
+function showSection(id){document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+</script>
+</head>
+<body>
+<header>
+<h1>ARANID PMC</h1>
+<p>BLACK ARCHIVE / LEVEL ███ CLEARANCE</p>
+<p><span class="redacted">UNAUTHORIZED ACCESS IS DENIED</span></p>
+</header>
+
+<nav>
+<button onclick="showSection('overview')">TỔNG QUAN</button>
+<button onclick="showSection('ranks')">QUÂN HÀM</button>
+<button onclick="showSection('callsign')">CALLSIGN</button>
+<button onclick="showSection('arsenal')">VŨ KHÍ</button>
+<button onclick="showSection('campaigns')">CHIẾN DỊCH</button>
+<button onclick="showSection('intel')">INTEL</button>
+</nav>
+
+<section id="overview" class="active">
+<h2>HỒ SƠ TỔNG QUAN – ARANID PMC</h2>
+<div class="card">
+<p><strong>ARANID PMC</strong> không được thành lập. Tổ chức này <em>xuất hiện</em>.
+Không có ngày khai sinh, không có điều lệ công khai, không có quốc gia bảo trợ.
+Những tài liệu sớm nhất nhắc đến ARANID chỉ gọi họ là <em>"the web"</em> – một mạng lưới can thiệp chiến tranh không để lại dấu vết.</p>
+<p>Trong thế giới hậu–quốc gia, nơi quyền lực phân mảnh giữa tập đoàn, thành phố tự trị và khối kinh tế,
+ARANID tồn tại như một <strong>cơ chế sửa lỗi</strong>. Khi một cuộc xung đột không thể giải quyết bằng ngoại giao,
+không thể công khai bằng quân đội chính quy, ARANID được kích hoạt.</p>
+<p>Triết lý cốt lõi: <em>không chiếm đóng – không tuyên bố – không được ghi nhận</em>.
+Chiến thắng của ARANID được xác định khi đối phương <strong>không thể chứng minh họ từng tồn tại</strong>.</p>
+<p>Mọi hoạt động của ARANID đều xoay quanh kiểm soát thông tin, thao túng nhịp độ leo thang
+và loại bỏ các nút chỉ huy then chốt. Đối với ARANID, chiến tranh không bắt đầu bằng tiếng súng,
+mà bằng <em>dòng dữ liệu đầu tiên bị bóp méo</em>.</p>
+</div>
+</section>
+
+<section id="ranks">
+<h2>HỆ THỐNG QUÂN HÀM – CẤU TRÚC QUYỀN LỰC</h2>
+<div class="card">
+<p>ARANID không sử dụng quân hàm theo chuẩn quốc gia.
+Hệ thống cấp bậc được thiết kế để <strong>giảm thiểu truy vết và thay thế nhân sự tức thời</strong>.</p>
+</div>
+<div class="card-grid">
+<div class="card"><p class="rank">OVERSEER</p><p>Thực thể chỉ huy tối cao. Không rõ là một cá nhân hay một hội đồng. Mọi mệnh lệnh chiến lược đều xuất phát từ cấp này.</p></div>
+<div class="card"><p class="rank">WEB COMMANDER</p><p>Điều phối nhiều chiến trường cùng lúc. Kiểm soát dữ liệu, hậu cần và phân bổ lực lượng.</p></div>
+<div class="card"><p class="rank">STRIKE CAPTAIN</p><p>Chỉ huy đội hình tác chiến độc lập. Có toàn quyền quyết định trong phạm vi nhiệm vụ.</p></div>
+<div class="card"><p class="rank">SILK OPERATIVE</p><p>Đặc nhiệm nòng cốt. Được huấn luyện đa lĩnh vực: bộ binh, công nghệ, tâm lý chiến.</p></div>
+<div class="card"><p class="rank">GHOST ASSET</p><p>Nhân sự phi chính thức. Không tồn tại trên bất kỳ hệ thống nào. Thường được kích hoạt cho nhiệm vụ <span class="redacted">████</span>.</p></div>
+</div>
+</section>
+
+<section id="callsign">
+<h2>CALLSIGN – DANH TÍNH THAY THẾ</h2>
+<div class="card">
+<p>Mọi cá nhân gia nhập ARANID đều trải qua <em>Protocol Null</em>: xóa bỏ danh tính gốc.
+Tên thật, quốc tịch, lịch sử đều bị phân mảnh và niêm phong.</p>
+<p>Thứ còn lại duy nhất là <strong>Callsign</strong> – vừa là mật danh, vừa là hồ sơ chiến tranh.</p>
+</div>
+<div class="card-grid">
+<div class="card"><p class="callsign">BLACK WIDOW</p><p>Ám sát cấp chiến lược. Chuyên loại bỏ cá nhân có ảnh hưởng hệ thống. Tỷ lệ hoàn thành tuyệt đối.</p></div>
+<div class="card"><p class="callsign">GHOST SILK</p><p>Chiến tranh mạng & điện tử. Có khả năng làm tê liệt hạ tầng đô thị mà không cần hiện diện vật lý.</p></div>
+<div class="card"><p class="callsign">IRON WEB</p><p>Xung kích hạng nặng. Được triển khai khi yêu cầu phá vỡ phòng tuyến trong thời gian ngắn.</p></div>
+<div class="card"><p class="callsign">NULL TRACE</p><p>Thu hồi, làm sạch và xóa mọi dấu vết ARANID sau nhiệm vụ. Không để lại hậu kiểm.</p></div>
+</div>
+</section>
+
+<section id="arsenal">
+<h2>KHO VŨ KHÍ – ARANID ARSENAL</h2>
+<div class="card">
+<p>ARANID không sở hữu vũ khí theo nghĩa truyền thống.
+Mọi trang bị đều được thiết kế theo triết lý: <em>linh hoạt – khó truy nguồn – hủy bỏ nhanh</em>.</p>
+<p><strong>ARX-9 Widowmaker</strong>: súng trường mô-đun. Có thể tái cấu hình giữa các vai trò trong vòng vài phút.
+Tích hợp hệ thống ổn định thông minh, giảm sai số do người bắn.</p>
+<p><strong>Viper SMG</strong>: tiểu liên cận chiến, độ ồn thấp, tối ưu cho tác chiến đô thị và không gian hẹp.</p>
+<p><strong>Black Fang Drone</strong>: drone trinh sát – tấn công bầy đàn. Hoạt động theo thuật toán tự phối hợp.</p>
+<p><strong>Ghost Weave Armor</strong>: giáp sợi nano. Giảm tín hiệu nhiệt, hạn chế phát hiện cảm biến.</p>
+</div>
+</section>
+
+<section id="campaigns">
+<h2>CHIẾN DỊCH – HỒ SƠ GIẢI MÃ</h2>
+<div class="card">
+<h3>OPERATION: BLACK SILK</h3>
+<p>Năm 2046. Mục tiêu: siêu đô thị <span class="redacted">████████</span>.</p>
+<p>Trong 11 ngày, ARANID thao túng dòng tiền, truyền thông và chuỗi chỉ huy.
+Không có giao tranh trực diện. Không có thương vong được ghi nhận.</p>
+<p>Ngày thứ 12, chính quyền đô thị tự giải thể. Không bên nào nhận trách nhiệm.</p>
+</div>
+<div class="card terminal">
+<p>REQUEST FAILED</p>
+<p>PROTOCOL: ARACHNO</p>
+<p>STATUS: UNKNOWN INTERFERENCE</p>
+<p>MESSAGE RECOVERED: “YOU ARE NOT THE ONLY HUNTERS.”</p>
+</div>
+</section>
+
+<section id="intel">
+<h2>BÁO CÁO TÌNH BÁO & TIMELINE</h2>
+<div class="card-grid">
+<div class="card">
+<h3>OBSIDIAN ORDER</h3>
+<p>PMC – tài phiệt. Tin vào hủy diệt trực diện.</p>
+<p class="threat">THREAT LEVEL: EXTREME</p>
+</div>
+<div class="card">
+<h3>RED VEIL SYNDICATE</h3>
+<p>Bán quân sự – công nghệ. Thao túng thông tin và tâm lý.</p>
+<p class="threat">THREAT LEVEL: HIGH</p>
+</div>
+</div>
+<div class="card timeline">
+<p class="time">2039</p><p>Dữ liệu đầu tiên về “the web” xuất hiện.</p>
+<p class="time">2042</p><p>Can thiệp bí mật vào 3 xung đột khu vực.</p>
+<p class="time">2046</p><p>Operation BLACK SILK.</p>
+<p class="time">2047</p><p>Request Failed – ARACHNO. Đối thủ chưa xác định.</p>
+</div>
+</section>
+
+<footer>
+<p>ARANID PMC – BLACK ARCHIVE | LEVEL ███ CLEARANCE REQUIRED</p>
+</footer>
+</body>
+</html>
