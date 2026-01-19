@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>ARANID PMC – Tactical Universe</title>
+<style>
+body{margin:0;font-family:Arial;background:#0b0e13;color:#e6e6e6}
+header{padding:50px;text-align:center;background:radial-gradient(circle at top,#111,#05070a)}
+header img{width:120px;margin-bottom:10px}
+nav{display:flex;justify-content:center;gap:15px;background:#111;position:sticky;top:0;z-index:10}
+nav button{background:#1c1f26;color:#fff;border:none;padding:12px 18px;cursor:pointer;transition:.3s}
+nav button:hover{background:#2f3542}
+section{display:none;padding:40px;max-width:1200px;margin:auto;animation:fade .6s}
+section.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#151922;padding:18px;border-radius:8px;box-shadow:0 0 15px #000}
+img{width:100%;border-radius:8px;margin-top:10px}
+.classified{background:#000;color:#000;padding:2px 6px;border-radius:3px}
+.classified:hover{color:#0f0}
+footer{text-align:center;padding:25px;font-size:13px;color:#aaa}
+.tree{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:20px}
+.node{background:#0f1320;padding:15px;border-left:4px solid #0f0;border-radius:6px}
+</style>
+<script>
+function showSection(id){
+ document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.getElementById('clickSound').play();
+}
+</script>
+</head>
+<body>
+<audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+<header>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Spider_icon.svg/512px-Spider_icon.svg.png">
+<h1>ARANID PMC</h1>
+<p>Private Military Corporation – Fictional Tactical Universe</p>
+</header>
+<nav>
+<button onclick="showSection('enemy')">Đối địch</button>
+<button onclick="showSection('doctrine')">Học thuyết</button>
+<button onclick="showSection('deploy')">Triển khai</button>
+</nav>
+
+<section id="enemy" class="active">
+<h2>Phe đối địch chính</h2>
+<div class="card-grid">
+<div class="card">
+<h3>OBSIDIAN ORDER</h3>
+<p>Một tập đoàn quân sự ngầm kết hợp tài phiệt – tình báo. Ưu tiên sức mạnh hỏa lực, kiểm soát bằng bạo lực.</p>
+<img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?q=80&w=1200">
+</div>
+<div class="card">
+<h3>RED VEIL SYNDICATE</h3>
+<p>Mạng lưới bán quân sự – tội phạm công nghệ cao, thao túng chiến tranh thông tin và thị trường vũ khí.</p>
+<img src="https://images.unsplash.com/photo-1520975922203-b2b1cbe59f9c?q=80&w=1200">
+</div>
+</div>
+</section>
+
+<section id="doctrine">
+<h2>Cây học thuyết tác chiến</h2>
+<div class="tree">
+<div class="node"><h4>Shadow Control</h4><p>Chiếm quyền thông tin, làm mù đối phương.</p></div>
+<div class="node"><h4>Web Strike</h4><p>Đánh nhiều hướng, kết nối thời gian thực.</p></div>
+<div class="node"><h4>Silent Elimination</h4><p>Ám sát chính xác, không để dấu vết.</p></div>
+<div class="node"><h4>Iron Suppression</h4><p>Đột kích hạng nặng khi cần áp đảo.</p></div>
+<div class="node"><h4>Adaptive Warfare</h4><p>Tự điều chỉnh chiến thuật theo tình huống.</p></div>
+</div>
+</section>
+
+<section id="deploy">
+<h2>Triển khai ARANID thành website thật</h2>
+<div class="card">
+<h3>Bước 1 – Tạo file</h3>
+<p>Dùng Acode hoặc SPCK trên điện thoại → tạo file <strong>index.html</strong> → dán toàn bộ code.</p>
+</div>
+<div class="card">
+<h3>Bước 2 – Upload GitHub</h3>
+<p>Tạo repository mới → upload index.html → vào Settings → Pages → bật GitHub Pages.</p>
+</div>
+<div class="card">
+<h3>Bước 3 – Nhận link</h3>
+<p>Bạn sẽ có link dạng: <em>https://tenban.github.io/aranid</em> để chia sẻ hoặc trình diễn.</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 ARANID PMC – Fictional Tactical Universe</p>
+</footer>
+</body>
+</html>
